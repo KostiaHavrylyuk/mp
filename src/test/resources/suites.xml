@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="AudiTests">
+    <test name="Testing Audi cars">
+        <groups>
+            <run>
+                <include name="car"/>
+                <exclude name="volkswagen"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="MyTest"/>
+        </classes>
+    </test>
+</suite>
