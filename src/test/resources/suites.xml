@@ -2,16 +2,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 
-<suite name="AudiTests">
-    <test name="Testing Audi cars">
-        <groups>
-            <run>
-                <include name="car"/>
-                <exclude name="volkswagen"/>
-            </run>
-        </groups>
+<suite name="HomePageTest">
+    <test name="Testing Home Page">
         <classes>
-            <class name="MyTest"/>
+            <class name="HomePageTest"/>
         </classes>
     </test>
 </suite>
