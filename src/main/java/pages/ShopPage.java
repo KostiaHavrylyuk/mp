@@ -13,7 +13,7 @@ public class ShopPage {
     @FindBy(xpath="//*[@class=\"shop-title-wrapper\"]")
     private WebElement header;
 
-    public ShopPage (WebDriverFactory driver) {
+    public ShopPage () {
         this.driver=driver;
         driver.getInstance("chrome");
         WebDriverFactory.LoadApplication(PAGE_URL);
@@ -21,7 +21,7 @@ public class ShopPage {
 
 
     public boolean isPageOpened () {
-        return header.getText().toString().contains("Магазин");
+        return header.isDisplayed();
     }
 
 }

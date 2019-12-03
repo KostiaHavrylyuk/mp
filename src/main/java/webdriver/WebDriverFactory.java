@@ -22,6 +22,7 @@ public class WebDriverFactory {
     }
 
     public static WebDriver getInstance(String browser) {
+        //use "case"
         if (webDriver == null) {
             if (CHROME.equals(browser)) {
 
@@ -31,7 +32,8 @@ public class WebDriverFactory {
                 options.addArguments("test-type");
                 options.addArguments("disable-infobars");
 
-                webDriver = new ChromeDriver(options);
+                webDriver = new ChromeDriver(options); //use 'call singleton'
+                // separate options and Singlton.
 
             } else if (FIREFOX.equals(browser)) {
                 WebDriverManager.firefoxdriver().setup();

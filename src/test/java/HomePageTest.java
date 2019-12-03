@@ -1,18 +1,18 @@
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.BasePage;
 import pages.HomePage;
 import pages.ShopPage;
 import webdriver.WebDriverFactory;
 
-public class HomePageTest {
-    WebDriverFactory webDriver;
+public class HomePageTest extends BaseTest {
 
     @Test
     public void openShopPage() {
-        HomePage home = new HomePage(webDriver);
-        ShopPage shop = new ShopPage(webDriver);
-        home.clickOnShopMenu();
-        Assert.assertTrue(shop.isPageOpened());
+        HomePage homePage = new HomePage(driver);
+        ShopPage shopPage = new ShopPage();
+        homePage.clickOnShopMenu();
+        Assert.assertTrue(shopPage.isPageOpened());
     }
 }
